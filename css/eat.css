@@ -1,0 +1,276 @@
+/* Base size for mobile device (screen-width below 750px) */
+html, body {
+	margin: 0;  
+	height:100%;
+	font-family: "Comic Sans MS", cursive, sans-serif;
+	display: block;
+	background-color: yellow;
+}
+
+/* All the elements are centered on the page, by using diferent background-color for div+id, 
+the page is sepereated into three parts */
+
+/* The first part is in black */
+#folk{
+	width:100%;
+	height: 100%;
+	position: relative;
+	background: url("../images/folk.jpg");
+	background-position: center;
+    background-repeat:no-repeat;
+	background-size: 300px;
+	background-color:black;
+}
+
+/* The arrow on the first part will lead the user to the second part */
+.arrow{
+	font-size: 4em;
+	position: absolute;
+	bottom: 0;
+	right:0;
+	left:0; 
+	text-align: center;
+	cursor: pointer;
+}
+
+/* The arrow will turn black when user's move over it */
+.arrow a{
+	text-decoration: none;
+	color: white;
+}
+
+.arrow a:hover{
+	color:black ;
+}
+
+/* The second part is in white */
+#slogan{
+	display:flex;
+	flex-direction: column;
+	align-items:center;
+	justify-content:center;
+	width:100%;  
+	height: 100%;
+	min-height: 350px;
+    background-size:cover; 
+	position: relative;
+	background-color: #FFF;
+}
+
+/* The slogan text has a left entrance animation */
+h1{
+	font-size: 3em;
+	color: #2D2D2D;
+	text-align: center;
+	background-color: #FFF;
+	text-shadow: 1px 0 #000000;
+	animation: slidein 3s ease;
+}
+
+@keyframes slidein {
+	0%{transform: translateX(-1000px);}
+	100%{transform: translateX(0px);}
+}
+
+/* The button will change color when user's mouse over it */
+
+.btn a{
+	color:#2D2D2D;
+	text-decoration: none;
+	transition: color 0.2s ease-out, background-color 0.2s ease-out;
+	background-color: #FFF;
+	display: inline-block;
+	border: 4px solid #2D2D2D;
+	box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2), 0 5px 10px 0 rgba(0, 0, 0, 0.19);
+	font-size: 1.5em;
+	line-height: 1.5em;
+	height: 1.5em;
+	padding: 0 0.5em;
+	text-shadow: 1px 0px #000000;
+	border-radius: 5px;
+}
+
+.btn a:hover {
+	cursor: pointer;
+	color: #FFF;
+	background: #2D2D2D;
+}	
+
+/* This div+id is in the second part too */
+#main{
+	display:flex;
+	flex-direction: column;
+	align-items:center;
+	justify-content:center;
+	position: relative;
+	width:100%;  
+	min-height:700px;   
+	background-color: #FFF;
+}
+
+/* Image size is responsible to the screen strech */
+img{
+	width:100%;
+	height:100%;
+	max-width: 350px;
+}
+
+/* The button will change color when user's mouse over it */
+#bt{
+	color:#2D2D2D;
+	background-color: #FFF;
+	border: 4px solid #2D2D2D;
+	font-size: 1.5em;
+	height: 2em;
+	padding: 0 0.5em;
+	border-radius: 5px;
+	text-shadow: 1px 1px #000000;
+	box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2), 0 5px 10px 0 rgba(0, 0, 0, 0.19);
+	transition: color 0.2s ease-out, background-color 0.2s ease-out;
+	font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
+#bt:hover {
+	cursor: pointer;
+	color: #FFF;
+	background: #2D2D2D;
+}	
+
+h3{
+	font-size: 1.5em;
+	color: #2D2D2D;
+	text-align: center;
+	text-shadow: 1px 0px #000000;	
+}
+
+/* The third part is in red */
+#footer{
+	display:flex;
+	flex-direction: column;
+	align-items:center;
+	width:100%;  
+	height: 100%;
+    background-size:cover; 
+	background-color:red;
+	justify-content:center;
+}
+
+h2{
+	font-size: 4em;
+	color: white;
+	background-color: red;
+	text-shadow: 1px 1px #000000;	
+}
+
+/* Medium size for tablet and laptop (screen-width from 750px to 1500px) */
+@media screen and (min-width: 750px) {
+    /*  Adjust the background-image	size to fit the screen */	
+    #folk{
+		background-size: 600px;
+	};
+
+	.arrow{
+		font-size: 6em;
+	}
+
+	/* Change the colors of background, button and headings in #main and #footer to 
+	seperate the page into four partes 
+	*/
+
+	/* Adjust the #main min-height to fit the screen */
+	/* The third div+id changes color to red and become the third part */
+	#main{
+		min-height:830px;   
+		background-color: #FA0B22;
+	}
+
+	/* The fourth div+id changes color to yellow and becomes the fourth part */
+	#footer{
+		background-color:yellow;
+	}
+
+	/* Set maxium size for the images and add a shadow */ 
+	img{
+		max-width: 550px;
+		box-shadow: 0 8px 15px 0 rgba(0, 0, 0, 0.2), 0 10px 20px 0 rgba(0, 0, 0, 0.19);
+	}
+
+	/*
+	Largen the font-size of h1, h2, h3 and buttons to make sure 
+	they can be seen clearly on the screen
+	*/
+	h1{
+		font-size: 4em;
+	}
+
+	h3{
+		font-size: 2em;
+		color: #FFF;
+	}
+
+	h2{
+		font-size: 6em;
+		color: white;
+		background-color: yellow;
+	}
+
+	.btn{ 
+		font-size:1.5em;
+	}
+
+	#bt{
+		color:#FFF;
+		background-color: #FA0B22;
+		border: 4px solid #FFF;
+		font-size: 2em;
+		margin-top: 1.5em;
+	}
+
+	#bt:hover {
+		color: #FA0B22;
+		background: #FFF;
+		border: 4px solid #FFF;
+	}	
+}
+
+	/* Large size for large desktop (screen-width above 1500px) */
+	@media screen and (min-width: 1500px) {
+		/*  Adjust the background-image	to fit the screen */	
+		#folk{
+			background-size: 800px;
+		}
+
+        /*  Adjust the #main min-height to fit the screen */
+        #main{
+		min-height:1200px;   
+	    }
+
+	    /* Set maxium size for the the images */
+		img{
+			max-width: 700px;
+		}
+
+		/*
+	    Largen the font-size of h1, h2, h3 and buttons to make sure 
+	    they can be seen clearly on the screen
+	    */
+		h1{ 
+			font-size:6em;
+		}
+
+		h2{
+			font-size: 10em;
+		}
+
+		h3{
+			font-size: 3em;
+		}
+
+		.btn{ 
+			font-size:2em;
+		}
+
+		#bt{
+			font-size: 3em;
+		}		
+	}
