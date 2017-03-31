@@ -2,9 +2,14 @@
 html, body {
 	margin: 0;  
 	height:100%;
-	font-family: "Comic Sans MS", cursive, sans-serif;
 	display: block;
-	background-color: yellow;
+	background-color: black;
+	font-family: 'Comic Sans Ms', 'Bubblegum Sans', serif;
+}
+
+@font-face {
+    font-family: 'Comic Sans Ms';
+    src: url("../fonts/comic.ttf") format('truetype');
 }
 
 /* All the elements are centered on the page, by using diferent background-color for div+id, 
@@ -54,7 +59,7 @@ the page is sepereated into three parts */
 	min-height: 350px;
     background-size:cover; 
 	position: relative;
-	background-color: #FFF;
+	background-color: #F2F2F2;
 }
 
 /* The slogan text has a left entrance animation */
@@ -62,9 +67,9 @@ h1{
 	font-size: 3em;
 	color: #2D2D2D;
 	text-align: center;
-	background-color: #FFF;
-	text-shadow: 1px 0 #000000;
+	background-color: #F2F2F2;
 	animation: slidein 3s ease;
+	text-shadow: 1px 0 #000000;
 }
 
 @keyframes slidein {
@@ -78,7 +83,7 @@ h1{
 	color:#2D2D2D;
 	text-decoration: none;
 	transition: color 0.2s ease-out, background-color 0.2s ease-out;
-	background-color: #FFF;
+	background-color: #F2F2F2;
 	display: inline-block;
 	border: 4px solid #2D2D2D;
 	box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2), 0 5px 10px 0 rgba(0, 0, 0, 0.19);
@@ -92,7 +97,7 @@ h1{
 
 .btn a:hover {
 	cursor: pointer;
-	color: #FFF;
+	color: #F2F2F2;
 	background: #2D2D2D;
 }	
 
@@ -120,14 +125,14 @@ img{
 	color:#2D2D2D;
 	background-color: #FFF;
 	border: 4px solid #2D2D2D;
+	text-shadow: 1px 0px #000000;
 	font-size: 1.5em;
 	height: 2em;
 	padding: 0 0.5em;
 	border-radius: 5px;
-	text-shadow: 1px 1px #000000;
 	box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2), 0 5px 10px 0 rgba(0, 0, 0, 0.19);
 	transition: color 0.2s ease-out, background-color 0.2s ease-out;
-	font-family: "Comic Sans MS", cursive, sans-serif;
+	font-family: 'Comic Sans Ms', 'Bubblegum Sans', serif;
 }
 
 #bt:hover {
@@ -140,7 +145,7 @@ h3{
 	font-size: 1.5em;
 	color: #2D2D2D;
 	text-align: center;
-	text-shadow: 1px 0px #000000;	
+	text-shadow: 1px 0px #000000;
 }
 
 /* The third part is in red */
@@ -159,7 +164,7 @@ h2{
 	font-size: 4em;
 	color: white;
 	background-color: red;
-	text-shadow: 1px 1px #000000;	
+	text-shadow: 1px 1px #000000;
 }
 
 /* Medium size for tablet and laptop (screen-width from 750px to 1500px) */

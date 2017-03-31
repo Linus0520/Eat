@@ -5,7 +5,7 @@
 	<meta name= "viewport" content="width=device-width, initial-scale=1.0">
 	<title>Eat</title>
 	<link rel="stylesheet" type="text/css" href="css/eat.css"/>
-	<script src="js/myScript.js"></script>
+	<link href="https://fonts.googleapis.com/css?family=Bubblegum+Sans" rel="stylesheet">
 </head>
 <body>
 <!-- Use div+id to seperate the main body into four parts -->
@@ -31,11 +31,12 @@
 	<div id="main">
 		<img class="food" src='images/01.png' />
 		<button id="bt" value="Stop" onclick = "stop();" style="outline: none;">Stop</button>
-		<h3>Click the button to see the option</h3>
+		<h3>Click button to see the option</h3>
 	</div>
 
 	<div id ="footer">
 		<h2>Enjoy!</h2>
 	</div>
 </body>
+<script src="js/myScript.js"></script>
 </html>
